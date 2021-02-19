@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--以上第一行指定为xml文件，第二行指定为mybatis文档类型-->
+<mapper namespace="com.douyuehan.doubao.mapper.BmsTipMapper">
+    <select id="getRandomTip" resultType="com.douyuehan.doubao.entity.BmsTip">
+        select *
+        from bms_tip
+        order by rand()
+        limit 1
+    </select>
+</mapper>
